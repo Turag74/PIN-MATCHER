@@ -1,9 +1,13 @@
 //create pin
+
 document.getElementById("creatPin").addEventListener("click", function(){
     var creatPin = Math.round(1000+Math.random()*9000);
     document.getElementById("pin").value = creatPin;
 })
+
 //field number
+
+
 function number(num){
     var input = document.getElementById("inputPin");
     switch(num){
@@ -40,6 +44,7 @@ function number(num){
     }
 }
 
+
 document.getElementById("clear").addEventListener("click", function(){
     document.getElementById("inputPin").value = "";
 })
@@ -53,7 +58,11 @@ document.getElementById("clearSpace").addEventListener("click", function(){
         input.value = x;
     }
 })
+
+
 //pin matcher function
+
+
 document.getElementById("submit").addEventListener("click", function(){
     var input = document.getElementById("inputPin").value;
     var pin = document.getElementById("pin").value;
@@ -84,6 +93,8 @@ document.getElementById("submit").addEventListener("click", function(){
         }
     }
 })
+
+
 document.getElementById("creatPin").addEventListener("click", function(){
     display("submit","block")
     document.getElementById("submit").style.margin = "auto";
@@ -94,6 +105,8 @@ document.getElementById("creatPin").addEventListener("click", function(){
     display("rightPinNotify","none")
     document.getElementById("inputPin").value = "";
 })
+
+
 function display(id,property){
     document.getElementById(id).style.display = property;
 }
